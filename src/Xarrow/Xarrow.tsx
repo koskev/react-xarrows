@@ -43,6 +43,7 @@ const Xarrow: React.FC<xarrowPropsType> = (props: xarrowPropsType) => {
     arrowHeadProps,
     arrowTailProps,
     SVGcanvasProps,
+    SVGcanvasChildren,
     divContainerProps,
     divContainerStyle,
     SVGcanvasStyle,
@@ -209,6 +210,7 @@ const Xarrow: React.FC<xarrowPropsType> = (props: xarrowPropsType) => {
             }}
             overflow="auto"
             {...SVGcanvasProps}>
+            {SVGcanvasChildren ?? <></>}
             {/* body of the arrow */}
             <path
               ref={lineRef}
